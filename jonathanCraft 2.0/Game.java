@@ -53,24 +53,25 @@ public class Game implements Runnable {
         
 
         gameState = new GameState(handler);
+        //level1 = new Level1(handler);
         menuState = new MenuState(handler);
         menuState2 = new MenuState2(handler);
-        level1 = new Level1(handler);
+        
         State.setState(menuState);
-        System.out.println("menustate");
 
     }
 
 
     private void tick() {
         keyManager.tick();
-        System.out.println(State.getState().getClass());
+
         if(State.getState() != null) {
             State.getState().tick();
         } 
     }
 
     private void render() {
+        //System.out.println("1");
         bs = display.getCanvas().getBufferStrategy();
         if(bs == null) {
             display.getCanvas().createBufferStrategy(3);

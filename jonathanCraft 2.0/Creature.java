@@ -26,15 +26,13 @@ public abstract class Creature extends Entity {
     }
 
     public void move() {
-        System.out.println("move called");
-       // if(!checkEntityCollisions(xMove, 0f)) 
+        if(!checkEntityCollisions(xMove, 0f)) 
             moveX();
-       // if(!checkEntityCollisions(0f, yMove))    
+        if(!checkEntityCollisions(0f, yMove))    
             moveY();
     }
 
     public void moveX() {
-        System.out.println("moveX called");
         if(xMove >= 0) {//moving right
 
             int tx = (int) (x + xMove + bounds.x + bounds.width) / Tile.TILEWIDTH;
@@ -57,7 +55,6 @@ public abstract class Creature extends Entity {
     }
 
     public void moveY() {
-        System.out.println("moveY called");
         if(yMove < 0) {//up
             int ty = (int) (y + yMove + bounds.y) / Tile.TILEHEIGHT;
             if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) && 
@@ -81,7 +78,6 @@ public abstract class Creature extends Entity {
     }
 
     protected boolean collisionWithTile(int x, int y) {
-        System.out.println("coll with tile called");
         return handler.getWorld().getTile(x, y).isSolid();
     }
 
