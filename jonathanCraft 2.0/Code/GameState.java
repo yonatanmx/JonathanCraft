@@ -10,9 +10,13 @@ public class GameState extends State {
 
     public GameState(Handler handler) {
         super(handler);
+        System.out.println("gamestate");
         this.handler = handler;
         world = new World(handler, "res/worlds/world1.txt");
         handler.setWorld(world);
+        for(int i = 0; i < 1000; i++) {
+            System.out.println("gemstet");
+        }
         
         
         
@@ -25,6 +29,9 @@ public class GameState extends State {
         if(handler.getKeyManager().esc) {
             State.setState(handler.getGame().menuState);
         }
+        //if(world.getEntityManager().getPlayer().getX() >= 1200 && world.getEntityManager().getPlayer().getY() >= 1200) {
+        //    State.setState(handler.getGame().level1);
+       // }
         
         
         
@@ -40,3 +47,4 @@ public class GameState extends State {
     }
 
 }
+//world.getEntityManager.getPlayer.setX()
