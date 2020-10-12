@@ -1,0 +1,13 @@
+#canvas {
+  padding: 0px;
+  margin: 0px;
+}
+
+body, html { 
+  margin: 0px;
+  padding: 0px
+}
+
+body {
+  background: black;
+}
