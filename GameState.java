@@ -12,8 +12,10 @@ public class GameState extends State {
         super(handler);
         this.handler = handler;
         world = new World(handler, "res/worlds/world1.txt");
-        
+        world.getEntityManager().getPlayer().setX(100);
+        world.getEntityManager().getPlayer().setY(100);
         handler.setWorld(world);
+        
         
         
         
