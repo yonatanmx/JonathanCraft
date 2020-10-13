@@ -12,6 +12,7 @@ public abstract class State {
 
     public static void setState(State state) {
         currentState = state;
+        state.sw();
     }
 
     public static State getState() {
@@ -27,10 +28,12 @@ public abstract class State {
         this.Handler = handler;
 
     }
+    public int m = 0;
 
     public abstract void tick();
 
     public abstract void render(Graphics g);
 
+    public abstract void sw();
     
 }

@@ -39,4 +39,9 @@ public class MenuState2 extends State {
         Text.drawString(g, " CREATED BY JONATHAN MARX 2020", handler.getWidth() / 2 - 0, handler.getHeight() -  100, true, Color.black, Assets.font282);
     }
 
+    @Override
+    public void sw() {
+        
+    }
+
 }

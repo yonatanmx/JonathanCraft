@@ -11,7 +11,7 @@ public class Level1 extends State {
     public Level1(Handler handler) {
         super(handler);
         this.handler = handler;
-        State.setState(handler.getGame().level1);
+        //State.setState(handler.getGame().level1);
         world = new World(handler, "res/worlds/level2.txt");
         handler.setWorld(world);
         
@@ -38,6 +38,11 @@ public class Level1 extends State {
          
          
 
+    }
+
+    @Override
+    public void sw() {
+        handler.setWorld(world);
     }
 
 }

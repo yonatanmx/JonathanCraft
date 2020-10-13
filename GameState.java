@@ -3,19 +3,16 @@ import java.awt.*;
 public class GameState extends State {
 
     
-    private World world;
+    public World world;
 
     private Handler handler;
-    
 
     public GameState(Handler handler) {
         super(handler);
         this.handler = handler;
         world = new World(handler, "res/worlds/world1.txt");
-        world.getEntityManager().getPlayer().setX(100);
-        world.getEntityManager().getPlayer().setY(100);
-        handler.setWorld(world);
         
+        handler.setWorld(world);
         
         
         
@@ -49,6 +46,11 @@ public class GameState extends State {
          
          
 
+    }
+
+    @Override
+    public void sw() {
+        handler.setWorld(world);
     }
 
 }
