@@ -18,6 +18,7 @@ public class Game implements Runnable {
     public State menuState;
     public State menuState2;
     public State level1;
+    public State endScreen;
 
     private KeyManager keyManager;
     private MouseManager mouseManager;
@@ -44,8 +45,6 @@ public class Game implements Runnable {
         display.getFrame().addMouseMotionListener(mouseManager);
         display.getCanvas().addMouseListener(mouseManager);
         display.getCanvas().addMouseMotionListener(mouseManager);
-        //String testpath = "C:\\Users\\yonatan marx\\Desktop\\javaMX\\codenmore game tutorial\\res\\textures\\sheet.png";
-        //test = ImageLoader.loadImage(testpath);
         Assets.init();
 
         handler = new Handler(this);
@@ -53,9 +52,10 @@ public class Game implements Runnable {
         
 
         gameState = new GameState(handler);
-        //level1 = new Level1(handler);
         menuState = new MenuState(handler);
         menuState2 = new MenuState2(handler);
+        level1 = new Level1(handler);
+        endScreen = new EndScreen(handler);
         
         State.setState(menuState);
 

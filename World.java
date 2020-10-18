@@ -22,12 +22,6 @@ public class World {
         entityManager = new EntityManager(handler, new Player(handler, 100, 100));
         itemManager = new ItemManager(handler);
         
-        try {
-            Thread.sleep(1000);
-        } catch (Exception e) {
-            //TODO: handle exception
-        }
-        
         loadWorld(path);
 
         entityManager.getPlayer().setX(spawnX);
