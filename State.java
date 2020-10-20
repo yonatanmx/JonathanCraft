@@ -30,6 +30,8 @@ public abstract class State {
     }
     public int m = 0;
 
+    public abstract void resset();
+
     public abstract void tick();
 
     public abstract void render(Graphics g);

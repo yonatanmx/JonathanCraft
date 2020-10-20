@@ -6,7 +6,7 @@ public class Level1 extends State {
     private World world;
 
     private Handler handler;
-    
+    private int m = 0;
     private World[] worlds = new World[10];
     private int i = 0;
 
@@ -42,8 +42,10 @@ public class Level1 extends State {
         if(handler.getKeyManager().esc) {
             State.setState(handler.getGame().menuState);
         }
+        
         try {
-            if((int)world.getEntityManager().getPlayer().getX() >= 1810 || (int)world.getEntityManager().getPlayer().getY() >= 1810) {
+            if((int)world.getEntityManager().getPlayer().getX() >= (world.getWidth() * 60)  - 50 && (int)world.getEntityManager().getPlayer().getY() >= (world.getHeight() * 60)  - 50) {
+                
                 if(i == worlds.length) {
                     State.setState(handler.getGame().endScreen);
                 }
@@ -70,6 +72,7 @@ public class Level1 extends State {
     public void render(Graphics g) {
 
         world.render(g);
+        Text.drawString(g, "LEVEL " + Integer.toString(i + 1), handler.getWidth() / 2 - 0, 100, true, Color.black, Assets.font282);
          
          
 
@@ -81,7 +84,14 @@ public class Level1 extends State {
     }
 
     public void resset() {
+        
         i = 0;
+        world = worlds[0];
+        if(m == 0) {
+            m = 1;    
+        } else {
+            sw();
+        }
     }
 
 }

@@ -43,5 +43,7 @@ public class MenuState2 extends State {
     public void sw() {
         
     }
+    @Override
+    public void resset() {}
 
 }

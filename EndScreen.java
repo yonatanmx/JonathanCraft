@@ -43,5 +43,7 @@ public class EndScreen extends State {
     public void sw() {
         
     }
+    @Override
+    public void resset() {}
 
 }

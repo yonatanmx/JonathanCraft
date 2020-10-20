@@ -17,6 +17,9 @@ public class MenuState extends State {
                 // handler.getMouseManager().setUIManager(null);
                 
                 //handler.getGame().level1 = new Level1(handler);
+                handler.getGame().level1.resset();
+                handler.getWorld().getEntityManager().getPlayer().setX(100);
+                handler.getWorld().getEntityManager().getPlayer().setY(100);
                 State.setState(handler.getGame().level1);
             }}));
 
@@ -51,5 +54,7 @@ public class MenuState extends State {
     @Override
     public void sw() {
     }
+    @Override
+    public void resset() {}
 
 }

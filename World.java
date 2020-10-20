@@ -89,10 +89,10 @@ public class World {
 
     private void addEntities() {
 
-       // for(int i = 0; i < 7; i++) {
-        //    entityManager.addEntity(new Rock(handler, ranInt(50, 1100), ranInt(100, 1100)));
-        //    entityManager.addEntity(new Tree(handler, ranInt(100, 1100), ranInt(100, 1100)));
-       // }
+        for(int i = 0; i < 7; i++) {
+            entityManager.addEntity(new Rock(handler, ranInt(50, 1100), ranInt(100, 1100)));
+            entityManager.addEntity(new Tree(handler, ranInt(100, 1100), ranInt(100, 1100)));
+        }
     }
 
     private int ranInt(int min, int max) {
