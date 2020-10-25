@@ -4,7 +4,7 @@ JonathanCraft is a maze game that is completly programmed in java.
 
 ## Installation
 
-Go to my [website](https://www.github.io/JonathanCraft) to install JonathanCraft.
+Go to my [website](https://www.yonatanmx.github.io/JonathanCraft) to install JonathanCraft.
 
 ## Contact me
 
